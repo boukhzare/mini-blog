@@ -21,9 +21,6 @@ class UserController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
-        // login auto
-        // Auth::login($user);
-
         return redirect()->route('login')->with('success', 'Account created!');
     }
 
